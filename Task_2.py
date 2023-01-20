@@ -10,12 +10,12 @@ def take_input(player_token):
     valid = False
     while not valid:
         player_answer = int(input(f'Куда поставим " {player_token} ? : '))
-        if player_answer >= 1 and player_answer <= 9:
+        if  1 <= player_answer <= 9:
             if (str(board[player_answer-1]) not in 'XO'):
                 board[player_answer-1] = player_token
                 valid = True
             else:
-                print('Эта клетка уже занята')
+                print('Эта клетка занята')
         else:
             print('Некорректный ввод. Введите число от 1 до 9')
 
